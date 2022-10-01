@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(3, 0, 61) 0%,
+    rgb(10, 10, 136) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.title {
+  position: absolute;
+  top: 120px;
+  font-size: 60px;
+  text-shadow: 3px 3px 15px rgba(0, 212, 255, 1);
+}
+.card {
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(52, 51, 51, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  width: 20%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px 30px black;
+  font-weight: bold;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.Player1 {
+  text-shadow: 3px 3px 15px rgba(0, 212, 255, 1);
+}
+.Player2 {
+  text-shadow: 3px 3px 15px rgba(0, 212, 255, 1);
+}
+.btn-play {
+  font-size: 20px;
+}
+#tic-tac-toe {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "ES MS DS"
+    "EM M DM"
+    "EI MI DI";
+}
+
+.esquerdaSuperior {
+  grid-area: ES;
+  border-right: 3px solid rgba(0, 212, 255, 1);
+}
+.meioSuperior {
+  grid-area: MS;
+  border-right: 3px solid rgba(0, 212, 255, 1);
+}
+.direitaSuperior {
+  grid-area: DS;
+}
+.esquerdaMeio {
+  grid-area: EM;
+  border-top: 3px solid rgba(0, 212, 255, 1);
+  border-bottom: 3px solid rgba(0, 212, 255, 1);
+}
+.meio {
+  grid-area: M;
+  border: 3px solid rgba(0, 212, 255, 1);
+}
+.direitaMeio {
+  grid-area: DM;
+  border-top: 3px solid rgba(0, 212, 255, 1);
+  border-bottom: 3px solid rgba(0, 212, 255, 1);
+}
+.esquerdaInferior {
+  grid-area: EI;
+}
+.meioInferior {
+  grid-area: MI;
+  border-right: 3px solid rgba(0, 212, 255, 1);
+  border-left: 3px solid rgba(0, 212, 255, 1);
+}
+.direitaInferior {
+  grid-area: DI;
+}
+.playerName {
+  font-size: 40px;
+  text-shadow: 3px 3px 15px rgba(0, 212, 255, 1);
+}
+
+.gameArea {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: grid;
+  place-content: center;
+  visibility: hidden;
+}
+.gameArea:target {
+  visibility: visible;
+}
+.play {
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(52, 51, 51, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 30px black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding: 20px 40px;
+}
