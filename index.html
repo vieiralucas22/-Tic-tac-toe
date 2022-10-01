@@ -18,29 +18,67 @@
       <p class="title">Tic tac toe</p>
       <div class="card">
         <div class="player form-group">
-          <label for="Player1" class="Player1">Digite o nome do Player 1</label>
+          <label for="Player1" class="labelPlayer">Player 1</label>
           <input type="text" id="Player1" class="form-control" />
         </div>
         <div class="player form-group">
-          <label for="Player2" class="Player2">Digite o nome do Player 2</label>
+          <label for="Player2" class="labelPlayer">Player 2</label>
           <input type="text" id="Player2" class="form-control" />
         </div>
-        <a href="#gameArea" class="btn btn-outline-primary btn-play"> Jogar </a>
+        <a
+          href="#gameArea"
+          onclick="changeName()"
+          class="btn btn-outline-primary btn-play"
+        >
+          Jogar
+        </a>
       </div>
 
       <div id="gameArea" class="gameArea">
         <div class="play">
-          <p class="playerName">Vez do jogador: <span id="player">X</span></p>
+          <p class="playerName"><span id="player">X</span>`s turn</p>
           <div id="tic-tac-toe">
-            <div class="area-tic esquerdaSuperior"></div>
-            <div class="area-tic meioSuperior"></div>
-            <div class="area-tic direitaSuperior"></div>
-            <div class="area-tic esquerdaMeio"></div>
-            <div class="area-tic meio"></div>
-            <div class="area-tic direitaMeio"></div>
-            <div class="area-tic esquerdaInferior"></div>
-            <div class="area-tic meioInferior"></div>
-            <div class="area-tic direitaInferior"></div>
+            <div
+              class="area-tic esquerdaSuperior"
+              onclick="chooseField()"
+              id="ES"
+            ></div>
+            <div
+              class="area-tic meioSuperior"
+              id="MS"
+              onclick="chooseField()"
+            ></div>
+            <div
+              class="area-tic direitaSuperior"
+              id="DS"
+              onclick="chooseField()"
+            ></div>
+            <div
+              class="area-tic esquerdaMeio"
+              id="EM"
+              onclick="chooseField()"
+            ></div>
+            <div class="area-tic meio" id="M" onclick="chooseField()"></div>
+            <div
+              class="area-tic direitaMeio"
+              id="DM"
+              onclick="chooseField()"
+            ></div>
+            <div
+              class="area-tic esquerdaInferior"
+              id="EI"
+              onclick="chooseField()"
+            ></div>
+            <div
+              class="area-tic meioInferior"
+              id="MI"
+              onclick="chooseField()"
+            ></div>
+            <div
+              class="area-tic direitaInferior"
+              id="DI"
+              onclick="chooseField()"
+            ></div>
           </div>
           <a href="#" class="btn btn-outline-primary btn-play">Play again</a>
         </div>
