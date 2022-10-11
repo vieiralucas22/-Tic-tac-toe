@@ -12,6 +12,25 @@ function changeName() {
     flag = 0;
   }
 }
-function chooseField() {
+const boardGame = document.getElementById("tic-tac-toe");
+
+boardGame.addEventListener("click", function (e) {
+  let fieldSelect = document.getElementById(`${e.target.id}`);
+
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 3; j++) {}
+  }
+
+  switch (flag) {
+    case 0:
+      fieldSelect.style.backgroundImage = "url('../IMGS/X.png')";
+      break;
+    case 1:
+      fieldSelect.style.backgroundImage = "url('../IMGS/O.png')";
+      break;
+
+    default:
+      break;
+  }
   changeName();
-}
+});
